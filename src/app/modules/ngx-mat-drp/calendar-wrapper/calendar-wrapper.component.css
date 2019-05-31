@@ -12,7 +12,24 @@
     padding-left: 5%;
 }
 
-/* .mat-calendar {
-    width: 296px;
-    height: 354px;
-} */
+@media screen and (min-width: 341px) and (max-width: 600px) {
+    /* use viewports for smaller device screens so it always fits */
+    .mat-calendar {
+        max-width: 210px;
+        width: 50vw;
+        height: 35vh
+    }
+}
+
+@media screen and (max-width: 340px){
+    .mat-calendar {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .mat-calendar {
+        width: 250px;
+        height: 300px;
+    }
+}

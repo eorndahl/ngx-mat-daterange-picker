@@ -1,30 +1,79 @@
-<div [@transformPickerOverlay]="shouldAnimate" class="ngx-mat-drp-calendar-container">
-
-  <div class="ngx-mat-drp-calendar-item">
-    <calendar-wrapper 
-    [prefixLabel]="startDatePrefix"
-    [selectedDate]="fromDate"
-    [minDate]="fromMinDate"
-    [maxDate]="fromMaxDate"
-    (selectedDateChange)="updateFromDate($event)">
-  </calendar-wrapper>
-  </div>
-  <div class="ngx-mat-drp-calendar-item">
-    <calendar-wrapper 
-    [prefixLabel]="endDatePrefix"
-    [selectedDate]="toDate"
-    [minDate]="toMinDate"
-    [maxDate]="toMaxDate" 
-    (selectedDateChange)="updateToDate($event)">
-  </calendar-wrapper>
-  </div>
-  <div class="ngx-mat-drp-calendar-item">
-    <div class="ngx-mat-drp-menu">
-      <mat-drp-presets [presets]="presets" (presetChanged)="updateRangeByPreset($event)"></mat-drp-presets>
-      <div class="ngx-mat-drp-controls">
-        <button mat-button color="primary" (click)="applyNewDates($event)">{{applyLabel}}</button>
-        <button mat-button (click)="discardNewDates($event)">{{cancelLabel}}</button>
+<div class='desktop-wrapper'>
+  <div class='flex-row'>
+    <div class='column'>
+      <div class="ngx-mat-drp-calendar-item">
+        <calendar-wrapper [prefixLabel]="startDatePrefix" [selectedDate]="fromDate" [minDate]="fromMinDate"
+          [maxDate]="fromMaxDate" (selectedDateChange)="updateFromDate($event)">
+        </calendar-wrapper>
+      </div>
+    </div>
+    <div class='flex-column'>
+      <div class="ngx-mat-drp-calendar-item">
+        <calendar-wrapper [prefixLabel]="endDatePrefix" [selectedDate]="toDate" [minDate]="toMinDate"
+          [maxDate]="toMaxDate" (selectedDateChange)="updateToDate($event)">
+        </calendar-wrapper>
+      </div>
+    </div>
+    <div class='flex-column'>
+      <div class="ngx-mat-drp-input-item-desktop">
+        <div class="ngx-mat-drp-menu">
+          <mat-drp-presets [presets]="presets" (presetChanged)="updateRangeByPreset($event)"></mat-drp-presets>
+          <div class="ngx-mat-drp-controls">
+            <button mat-button color="primary" (click)="applyNewDates($event)">{{applyLabel}}</button>
+            <button mat-button (click)="discardNewDates($event)">{{cancelLabel}}</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class='mobile-wrapper'>
+  <div class='flex-row'>
+    <div class='flex-column'>
+      <calendar-wrapper [prefixLabel]="startDatePrefix" [selectedDate]="fromDate" [minDate]="fromMinDate"
+        [maxDate]="fromMaxDate" (selectedDateChange)="updateFromDate($event)">
+      </calendar-wrapper>
+    </div>
+    <div class='flex-column'>
+      <calendar-wrapper [prefixLabel]="endDatePrefix" [selectedDate]="toDate" [minDate]="toMinDate"
+        [maxDate]="toMaxDate" (selectedDateChange)="updateToDate($event)">
+      </calendar-wrapper>
+    </div>
+  </div>
+  <div class='flex-column'>
+    <div class="ngx-mat-drp-input-item-mobile center">
+      <div class="ngx-mat-drp-menu">
+        <mat-drp-presets [presets]="presets" (presetChanged)="updateRangeByPreset($event)"></mat-drp-presets>
+        <div class="ngx-mat-drp-controls">
+          <button mat-button color="primary" (click)="applyNewDates($event)">{{applyLabel}}</button>
+          <button mat-button (click)="discardNewDates($event)">{{cancelLabel}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='mobile-wrapper-xs'>
+    <div class='flex-column'>
+      <calendar-wrapper class="center" [prefixLabel]="startDatePrefix" [selectedDate]="fromDate" [minDate]="fromMinDate"
+        [maxDate]="fromMaxDate" (selectedDateChange)="updateFromDate($event)">
+      </calendar-wrapper>
+    </div>
+    <div class='flex-column'>
+      <calendar-wrapper class="center" [prefixLabel]="endDatePrefix" [selectedDate]="toDate" [minDate]="toMinDate"
+        [maxDate]="toMaxDate" (selectedDateChange)="updateToDate($event)">
+      </calendar-wrapper>
+    </div>
+    <div class='flex-column'>
+      <div class="ngx-mat-drp-input-item-mobile center">
+        <div class="ngx-mat-drp-menu">
+          <mat-drp-presets [presets]="presets" (presetChanged)="updateRangeByPreset($event)"></mat-drp-presets>
+          <div class="ngx-mat-drp-controls">
+            <button mat-button color="primary" (click)="applyNewDates($event)">{{applyLabel}}</button>
+            <button mat-button (click)="discardNewDates($event)">{{cancelLabel}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

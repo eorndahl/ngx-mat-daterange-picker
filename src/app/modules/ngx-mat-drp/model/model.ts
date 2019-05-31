@@ -25,7 +25,6 @@ export interface NgxDrpOptions {
   toMinMax?: Range;
   applyLabel?: string;
   cancelLabel?: string;
-  animation?: boolean;
   calendarOverlayConfig?: CalendarOverlayConfig;
   placeholder?: string;
   startDatePrefix?: string;

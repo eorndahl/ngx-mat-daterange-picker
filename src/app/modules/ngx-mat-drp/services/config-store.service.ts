@@ -6,7 +6,6 @@ export class ConfigStoreService {
   private _ngxDrpOptions: NgxDrpOptions;
   private defaultOptions = {
     excludeWeekends: false,
-    animation: true,
     locale: 'en-US',
     fromMinMax: { fromDate: null, toDate: null },
     toMinMax: { fromDate: null, toDate: null }

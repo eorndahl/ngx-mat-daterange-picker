@@ -1,12 +1,106 @@
-.ngx-mat-drp-calendar-container {
-    display: flex;
-    justify-content: space-around;
-    min-width: 650px;
-    height: 300px;
+@media screen and (max-width: 1280px) {
+    .desktop-wrapper {
+        display: none;
+    }
 }
 
-.ngx-mat-drp-calendar-item {
+@media screen and (min-width: 1281px) {
+    .desktop-wrapper {
+        min-height: 310px;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .mobile-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1280px) {
+    .mobile-wrapper {
+        height: 85vh;
+        min-height: 580px;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .mobile-wrapper {
+        height: 60vh; /* scale height on tablets*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-wrapper {
+        width: 100vw;
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 341px) {
+    .mobile-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 341px) {
+    .mobile-wrapper-xs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .mobile-wrapper-xs {
+        width: 100vw;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    flex-basis: 100%;
+    align-self: center;
+}
+
+@media screen and (min-width: 1281px) {
+    .ngx-mat-drp-calendar-item {
+        flex-basis: 33.33%;
+        padding: 0em 1em 0em 1em;
+        font-family: Roboto,"Helvetica Neue",sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ngx-mat-drp-calendar-item {
+        flex-basis: 50%;
+        padding: 1em;
+        font-family: Roboto,"Helvetica Neue",sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.ngx-mat-drp-input-item-desktop {
     flex-basis: 33.33%;
+    padding: 2em 1em 0em 1em;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ngx-mat-drp-input-item-mobile {
     min-width: 210px;
     padding: 1em;
     font-family: Roboto,"Helvetica Neue",sans-serif;
@@ -14,9 +108,6 @@
     font-weight: 400;
 }
 
-.ngx-mat-drp-menu {
-    height: 100%;
-}
 .ngx-mat-drp-controls {
     display: flex;
     justify-content: space-around;

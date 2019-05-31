@@ -47,38 +47,10 @@ export class CalendarOverlayService {
   }
 
   private getOverlayConfig(config: CalendarOverlayConfig): OverlayConfig {
-    const positionStrategy = this.overlay
-      .position()
-      .flexibleConnectedTo(this.hostElemRef)
-      .withFlexibleDimensions(false)
-      .withViewportMargin(8)
-      .withDefaultOffsetY(12)
-      .withPositions([
-        {
-          originX: 'start',
-          originY: 'bottom',
-          overlayX: 'start',
-          overlayY: 'top'
-        },
-        {
-          originX: 'start',
-          originY: 'top',
-          overlayX: 'start',
-          overlayY: 'bottom'
-        },
-        {
-          originX: 'end',
-          originY: 'bottom',
-          overlayX: 'end',
-          overlayY: 'top'
-        },
-        {
-          originX: 'end',
-          originY: 'top',
-          overlayX: 'end',
-          overlayY: 'bottom'
-        }
-      ]);
+    const positionStrategy = this.overlay.position()
+      .global()
+      .centerHorizontally()
+      .centerVertically();
 
     const overlayConfig = new OverlayConfig({
       hasBackdrop: config.hasBackdrop,
