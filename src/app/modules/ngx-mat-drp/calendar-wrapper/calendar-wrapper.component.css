@@ -29,7 +29,9 @@
 
 @media screen and (min-width: 601px) {
     .mat-calendar {
-        width: 250px;
-        height: 300px;
+        width: 15vw;
+        height: 30vh;
+        min-width: 250px;
+        min-height: 300px;
     }
 }

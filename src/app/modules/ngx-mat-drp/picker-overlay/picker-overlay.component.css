@@ -6,6 +6,7 @@
 
 @media screen and (min-width: 1281px) {
     .desktop-wrapper {
+        height: 18vw;
         min-height: 310px;
     }
 }
