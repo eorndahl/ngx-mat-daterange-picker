@@ -13,9 +13,7 @@ Packaged using [ng-packagr](http://spektrakel.de/ng-packagr/)
 
 ## Demo
 
-https://ashishgkwd.github.io/ngx-mat-daterange-picker/
-
-![ngx-mat-daterange-picker.gif](https://raw.githubusercontent.com/ashishgkwd/ngx-mat-daterange-picker/master/src/assets/img/ngx-mat-daterange-picker.gif)
+![ngx-mat-daterange-picker.gif](https://raw.githubusercontent.com/eorndahl/ngx-mat-daterange-picker/master/src/assets/img/calendar-responsiveness.gif)
 
 
 ## Installation 
