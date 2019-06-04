@@ -17,6 +17,7 @@
     }
 }
 
+/* tablet modal dimensions */
 @media screen and (min-width: 601px) and (max-width: 1280px) {
     .mobile-wrapper {
         height: 85vh;
@@ -30,6 +31,7 @@
     }
 }
 
+/* show modal full screen width up to this width */
 @media screen and (max-width: 600px) {
     .mobile-wrapper {
         width: 100vw;
